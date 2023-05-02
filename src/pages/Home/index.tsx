@@ -6,15 +6,12 @@ import { useEffect, useState } from 'react'
 import { differenceInSeconds } from 'date-fns'
 
 import {
-  CountdownContainer,
-  FormContainer,
   HomeContainer,
-  MinutesAmountInput,
-  Separator,
   StartCountdownButton,
   StopCountdownButton,
-  TaskInput,
 } from './styles'
+import { NewCycleForm } from './components/NewCycleForm'
+import { CountDown } from './components/CountDown'
 
 const newCycleFormValidationSchema = zod.object({
   task: zod.string().min(1, 'informe a tarefa'),
